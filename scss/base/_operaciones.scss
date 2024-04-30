@@ -1,0 +1,10 @@
+@mixin textos-div ($espacio, $display, $justify) {
+    margin-top: $espacio;
+    display: $display;
+    justify-content: $justify;
+}
+
+
+
+
+

@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Truculenta:opsz,wght@12..72,100..900&display=swap');
+@import url('https://cdn-uicons.flaticon.com/2.3.0/uicons-solid-rounded/css/uicons-solid-rounded.css');
+
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+/*HACE QUE LOS ELEMENTOS MIDAN LO QUE TIENEN QUE MEDIR*/
+}
+
+.barrabarra a {
+    text-decoration: none!important;
+    color: white!important;
+    font-family: truculenta!important;
+    font-weight: 300!important;
+}
+
+.row { /*componente de sass que no puedo cambiar y me genera desplazamiento lateral*/
+    --bs-gutter-x:0!important;
+}
+
+.separador {
+    height: 15px;
+    background-image: url(../img/barberia/separador.jpeg);
+}
+
+.fixed img {
+    /* Imagen de WHatsapp FLotante*/
+        width: 50px;
+        height: 50px;
+        position: fixed;
+    /*Fija la posicion en la pagina*/
+        bottom: 30px;
+        right: 30px;
+    }
