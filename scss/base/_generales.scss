@@ -36,15 +36,26 @@ header {
     background-image: url(../img/barberia/separador.jpeg);
 }
 
-.fixed img {
-    /* Imagen de WHatsapp FLotante*/
+.fixed {
+    img {
+        /* Imagen de WhatsApp Flotante*/
         width: 50px;
         height: 50px;
-        position: fixed;
-    /*Fija la posicion en la pagina*/
+        position: fixed; /* Fija la posición en la página */
         bottom: 30px;
         right: 30px;
     }
+}
+
+.shadow__btn {
+    &:hover {
+        border-radius: 100%;
+        box-shadow: 0 0 5px rgb(51, 255, 0),
+        0 0 25px rgb(85, 255, 0),
+        0 0 50px rgb(119, 255, 0),
+        0 0 100px rgb(0, 102, 0);
+    }
+}
 
 /*------------------------------------------------------------------FOOTER*/
 .site-footer {

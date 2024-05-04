@@ -27,13 +27,17 @@ header nav div a {
   background-image: url(../img/barberia/separador.jpeg); }
 
 .fixed img {
-  /* Imagen de WHatsapp FLotante*/
+  /* Imagen de WhatsApp Flotante*/
   width: 50px;
   height: 50px;
   position: fixed;
-  /*Fija la posicion en la pagina*/
+  /* Fija la posición en la página */
   bottom: 30px;
   right: 30px; }
+
+.shadow__btn:hover {
+  border-radius: 100%;
+  box-shadow: 0 0 5px #33ff00, 0 0 25px #55ff00, 0 0 50px #77ff00, 0 0 100px #006600; }
 
 /*------------------------------------------------------------------FOOTER*/
 .site-footer {
@@ -221,6 +225,9 @@ header nav div a {
       width: 500px; }
 
 /*-------------------------------------------------------------------FOOTER*/
+body {
+  font-family: "truculenta"; }
+
 .main-nosotros {
   background-image: url(../img/barberia/0c41e1690bd0f7a891bcc574bbb0482f.jpeg);
   filter: blur(0px);
@@ -257,6 +264,61 @@ header nav div a {
         color: red; }
     .main-nosotros .nosotros img {
       border-radius: 20px; }
+
+.tarjeta-producto-nueva {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px; }
+  .tarjeta-producto-nueva .card {
+    width: 300px;
+    height: 400px;
+    margin: 0 10px; }
+    .tarjeta-producto-nueva .card .card-img {
+      position: relative;
+      top: -20px;
+      height: 100px;
+      display: flex;
+      justify-content: center; }
+    .tarjeta-producto-nueva .card .project-info {
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      position: relative;
+      top: -50px;
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); }
+      .tarjeta-producto-nueva .card .project-info .project-title {
+        font-weight: 500;
+        font-size: 1.5em;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        color: black; }
+      .tarjeta-producto-nueva .card .project-info .lighter {
+        font-size: 0.9em; }
+      .tarjeta-producto-nueva .card .project-info .flex {
+        display: flex;
+        justify-content: space-between;
+        align-items: center; }
+      .tarjeta-producto-nueva .card .project-info .tag {
+        font-weight: lighter;
+        color: grey; }
+      .tarjeta-producto-nueva .card .project-info .price,
+      .tarjeta-producto-nueva .card .project-info .quantity {
+        font-size: 1em;
+        color: black; }
+      .tarjeta-producto-nueva .card .project-info .btn-buy {
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s; }
+      .tarjeta-producto-nueva .card .project-info .btn-buy:hover {
+        background-color: #0056b3; }
 
 .contact {
   padding: 50px 0;
@@ -378,34 +440,200 @@ header nav div a {
 .cards-tres {
   margin: 0 !important;
   padding: 100px 0px;
-  width: 92vw;
-  height: 50vh;
-  margin: 25vh auto;
-  display: grid;
-  text-align: center;
-  align-content: center;
-  grid-template-columns: repeat(3, calc(33.33% - 2vw));
-  grid-gap: 3vw; }
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center; }
   .cards-tres a {
-    transition: all 0.3s ease;
-    /*-- GENERIC STYLES --*/
-    background: white;
-    height: 50vh;
-    text-transform: uppercase;
-    display: grid;
-    align-content: center;
-    font-size: 5vw;
-    font-weight: bold;
-    text-decoration: none;
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
-    border-radius: 5px;
-    background: #eee; }
+    position: relative;
+    width: 320px;
+    height: 320px;
+    background-image: url(../img/barberia/black-wood-texture-background-free-photo.jpeg);
+    background-size: cover;
+    border-radius: 10px;
+    gap: 20px;
+    transition: all 1s ease;
+    border-radius: 25px;
+    text-decoration: none; }
     .cards-tres a:not(:hover) {
       opacity: 0.7;
       transform: scale(0.85); }
     .cards-tres a:hover {
       transform: scale(1.05) translateY(-5%);
       box-shadow: 0 8px 10px rgba(0, 0, 0, 0.35); }
-    .cards-tres a:active {
-      transform: scale(1.05) translateY(0%);
-      box-shadow: 0 3px 5px rgba(0, 0, 0, 0.35); }
+    .cards-tres a p {
+      font-family: "truculenta";
+      font-size: 50px;
+      color: white;
+      filter: blur(2px);
+      font-weight: bolder;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%); }
+
+.seccion-acordeon {
+  background: linear-gradient(to right, #888, #000);
+  padding: 20px; }
+
+.accordion {
+  display: flex;
+  flex-direction: column;
+  max-width: 991px;
+  min-width: 320px;
+  margin: 50px auto;
+  padding: 0 50px; }
+  .accordion h1 {
+    font-size: 32px;
+    text-align: center;
+    color: white;
+    text-shadow: 8px 4px 8px black; }
+  .accordion .accordion-item {
+    margin-top: 16px;
+    border: 1px solid #fcfcfc;
+    border-radius: 6px;
+    background: #ffffff;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px; }
+    .accordion .accordion-item .accordion-item-title {
+      position: relative;
+      margin: 0;
+      display: flex;
+      width: 100%;
+      font-size: 15px;
+      cursor: pointer;
+      justify-content: space-between;
+      flex-direction: row-reverse;
+      padding: 14px 20px;
+      box-sizing: border-box;
+      align-items: center; }
+      .accordion .accordion-item .accordion-item-title .icon {
+        margin-left: 14px; }
+    .accordion .accordion-item .accordion-item-desc {
+      display: none;
+      font-size: 14px;
+      line-height: 22px;
+      font-weight: 300;
+      color: #444;
+      border-top: 1px dashed #ddd;
+      padding: 10px 20px 20px;
+      box-sizing: border-box; }
+    .accordion .accordion-item input[type="checkbox"] {
+      position: absolute;
+      height: 0;
+      width: 0;
+      opacity: 0; }
+    .accordion .accordion-item input[type="checkbox"]:checked ~ .accordion-item-desc {
+      display: block; }
+    .accordion .accordion-item input[type="checkbox"]:checked ~ .accordion-item-title .icon:after {
+      content: "-";
+      font-size: 20px; }
+    .accordion .accordion-item input[type="checkbox"] ~ .accordion-item-title .icon:after {
+      content: "+";
+      font-size: 20px; }
+  .accordion .accordion-item:first-child {
+    margin-top: 0; }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /*HACE QUE LOS ELEMENTOS MIDAN LO QUE TIENEN QUE MEDIR*/ }
+
+.fotosgrid {
+  height: 100vh;
+  background-color: black;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: stretch; }
+  .fotosgrid .galeriagrid {
+    height: calc(100vh - 90px);
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 6px;
+    overflow: hidden;
+    background-color: black;
+    /* Espacio entre las celdas */ }
+    .fotosgrid .galeriagrid a {
+      background-image: url(../img/fondo-computadora.jpg);
+      background-attachment: fixed;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      overflow: hidden; }
+      .fotosgrid .galeriagrid a p {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        /* Fondo semitransparente */
+        color: white;
+        text-align: left;
+        font-size: 30px;
+        opacity: 0;
+        /* Ocultar inicialmente */
+        transition: 1s;
+        /* Transición suave */
+        padding-left: 10px; }
+        .fotosgrid .galeriagrid a p:hover {
+          opacity: 2;
+          /* Mostrar al pasar el mouse */
+          font-size: 80px; }
+      .fotosgrid .galeriagrid a.img-a {
+        grid-column: 1 / 3; }
+      .fotosgrid .galeriagrid a.img-b {
+        grid-column: 3 / 5;
+        grid-row: 1 / 3; }
+      .fotosgrid .galeriagrid a.img-d {
+        grid-column: 2 / 3;
+        grid-row: 2 / 5; }
+      .fotosgrid .galeriagrid a.img-d {
+        grid-column: 2 / 3;
+        grid-row: 2 / 5; }
+      .fotosgrid .galeriagrid a.img-e {
+        grid-row: 3 / 5; }
+      .fotosgrid .galeriagrid a.img-f {
+        grid-row: 3 / 5; }
+      .fotosgrid .galeriagrid a.img-g {
+        grid-row: 3 / 5; }
+
+@media screen and (max-width: 768px) {
+  .fotosgrid .galeriagrid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 1fr;
+    gap: 6px; }
+    .fotosgrid .galeriagrid a {
+      min-height: 0px; }
+      .fotosgrid .galeriagrid a p {
+        font-size: 30px;
+        line-height: 100px;
+        opacity: 1;
+        text-align: center; }
+        .fotosgrid .galeriagrid a p:hover {
+          opacity: 2;
+          /* Mostrar al pasar el mouse */
+          font-size: 35px; }
+      .fotosgrid .galeriagrid a.img-a {
+        grid-column: 1 / 2;
+        grid-row: 1 /2; }
+      .fotosgrid .galeriagrid a.img-b {
+        grid-column: 2 / 3;
+        grid-row: 1 / 2; }
+      .fotosgrid .galeriagrid a.img-c {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3; }
+      .fotosgrid .galeriagrid a.img-d {
+        grid-column: 2 / 3;
+        grid-row: 2 / 3; }
+      .fotosgrid .galeriagrid a.img-e {
+        grid-auto-columns: 1 /2;
+        grid-row: 3 / 4; }
+      .fotosgrid .galeriagrid a.img-f {
+        grid-column: 2 / 3;
+        grid-row: 3 / 4; }
+      .fotosgrid .galeriagrid a.img-g {
+        grid-column: 1/ 3;
+        grid-row: 4 / 5; } }
